@@ -10,11 +10,11 @@ let searchBtn = document.getElementById('searchBtn')
 let inputSearchBar = document.getElementById('input-search-bar')
 let showAllBtn = document.getElementById('showAllBtn')
 
-addToDoButton.addEventListener('click',function(){
+addItemBtn.addEventListener('click',function(){
     var paragraph = document.createElement('p');
     paragraph.classList.add('paragraph-styling');
     paragraph.innerText = inputField.value; 
-    toDoContainer.appendChild(paragraph);
+    itemsContainer.appendChild(paragraph);
     inputField.value = "";
 
     paragraph.addEventListener('click', function(){
@@ -22,7 +22,7 @@ addToDoButton.addEventListener('click',function(){
             var paragraph2 = document.createElement('p');
             paragraph2.innerText = paragraph.innerText; 
             checkedItemsContainer.appendChild(paragraph2);
-            toDoContainer.removeChild(paragraph);
+            itemsContainer.removeChild(paragraph);
         
 
 
@@ -30,7 +30,7 @@ addToDoButton.addEventListener('click',function(){
     
             checkedItemsContainer.removeChild(paragraph2);
             paragraph.innerText = paragraph2.innerText;
-            toDoContainer.appendChild(paragraph);
+            itemsContainer.appendChild(paragraph);
             
         })
     })    
