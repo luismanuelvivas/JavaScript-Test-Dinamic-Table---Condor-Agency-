@@ -1,0 +1,13 @@
+.container-principal{
+    display:flex;
+    justify-content: space-around;
+}
+
+aside{
+    width:35%;
+    border:solid 1px lightgray;
+}
+
+.paragraph-clicked-styling{
+    text-decoration: line-through;
+}
