@@ -1,7 +1,7 @@
-let addItemBtn = document.getElementById('addItem');
-let itemsContainer = document.getElementById('itemsContainer');
+let addItemBtn = document.getElementById('addItem')
+let itemsContainer = document.getElementById('itemsContainer')
 let inputField = document.getElementById('inputField')
-let checkedItemsContainer = document.getElementById('checked-items-container');
+let checkedItemsContainer = document.getElementById('checked-items-container')
 let deleteBtn = document.getElementById('deleteBtn')
 let deleteMode = false;
 let editBtn = document.getElementById('editBtn')
@@ -11,6 +11,7 @@ let inputSearchBar = document.getElementById('inputSearchBar')
 let showAllBtn = document.getElementById('showAllBtn')
 let section1 = document.getElementById('section1')
 let section2 = document.getElementById('section2')
+let deleteMessage = document.getElementById('deleteMessage')
 
 deleteBtn.addEventListener('click', function(){
     
@@ -19,10 +20,16 @@ deleteBtn.addEventListener('click', function(){
         editMode =false; 
         section1.className = 'section-delete-mode'
         section2.className ='section-delete-mode'
+        deleteBtn.className = 'deleteBtnOn'
+        deleteBtn.innerText = 'X'
+        deleteMessage.className = 'deleteMessageOn'
     }else{
         deleteMode = false
         section1.className = 'section1'
         section2.className ='section2'
+        deleteBtn.className = 'deleteBtn'
+        deleteBtn.innerText = 'Delete'
+        deleteMessage.className = 'deleteMessage'
     }
 
 })
@@ -33,9 +40,13 @@ editBtn.addEventListener('click', function(){
         editMode = true;
         deleteMode = false;
         section1.className = 'section-edit-mode';
+        section2.className ='section2'
+        deleteBtn.className = 'deleteBtn'
+        deleteBtn.innerText = 'Delete'
+        deleteMessage.className = 'deleteMessage'
     }else{
         editMode = false;
-        section1.className = 'section1'
+        section1.className = 'section1';
     }
 
 })

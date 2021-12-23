@@ -10,22 +10,27 @@
     <title>Javasript test - Condor Agency</title>
 </head>
 <body> 
-    <div class="search-bar">
-        <input type="text" id="inputSearchBar"> 
-        <button id="searchBtn"><i class="fa fa-search"></i></button>
-        <button id="showAllBtn">X</button>
-    </div>     
-
-    <button id="deleteBtn">Delete</button>
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" id="inputSearchBar"> 
+            <button id="searchBtn"><i class="fa fa-search"></i></button>
+            <button id="showAllBtn">X</button>
+        </div>     
+        <button id="deleteBtn" class="deleteBtn">Delete</button>
+    </div>
+    <center><h3 class="deleteMessage" id="deleteMessage">You are in delete mode, just click on the item you want to delete.</h3></center>
     <section class="container-principal">
     <aside class="section1" id="section1">
         <h2>Add Item</h2>
         <input id="inputField" type="text"> <button class="addItem" id="addItem">+</button>
-        <button id="editBtn">Edit</button>
+        <button id="editBtn" class="editBtn">Edit</button>
+        <h4>Click the item to check it!</h4>
+        <h3>You are in edit mode, write the new item in the input and click the item you want to change</h3>
         <div class="items" id="itemsContainer"></div>
     </aside>
     <aside class="section2" id="section2">
         <h2>Checked Items</h2>
+        <h4>Click the item to rollback!</h4>
         <div class="checkedItems" id="checked-items-container"></div>
     </aside>
 </section>
