@@ -9,18 +9,20 @@ let editMode = false;
 let searchBtn = document.getElementById('searchBtn')
 let inputSearchBar = document.getElementById('inputSearchBar')
 let showAllBtn = document.getElementById('showAllBtn')
+let section1 = document.getElementById('section1')
+let section2 = document.getElementById('section2')
 
 deleteBtn.addEventListener('click', function(){
     
     if(deleteMode === false){
         deleteMode = true;
         editMode =false; 
-        itemsContainer.style.color = 'red'
-        checkedItemsContainer.style.color ='red'
+        section1.className = 'section-delete-mode'
+        section2.className ='section-delete-mode'
     }else{
         deleteMode = false
-        itemsContainer.style.color = 'black'
-        checkedItemsContainer.style.color ='black'
+        section1.className = 'section1'
+        section2.className ='section2'
     }
 
 })
@@ -30,10 +32,10 @@ editBtn.addEventListener('click', function(){
     if(editMode === false){
         editMode = true;
         deleteMode = false;
-        itemsContainer.style.color = 'blue'
+        section1.className = 'section-edit-mode';
     }else{
-        editMode = false
-        itemsContainer.style.color = 'black'
+        editMode = false;
+        section1.className = 'section1'
     }
 
 })
@@ -68,6 +70,8 @@ addItemBtn.addEventListener('click',function(){
             if(inputField.value != ''){
                 paragraph.innerText = inputField.value;
                 inputField.value = '';
+                section1.className = 'section1';
+                editMode =  false;
             }else{
                 window.alert('The input is empty!')
             }

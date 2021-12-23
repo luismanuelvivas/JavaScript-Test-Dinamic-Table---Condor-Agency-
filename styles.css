@@ -4,6 +4,8 @@
 }
 
 aside{
+    border-radius:3em;
+    padding:3rem;
     width:35%;
     border:solid 1px lightgray;
 }
@@ -12,22 +14,63 @@ aside{
     text-decoration: line-through;
 }
 
+p{
+    border-radius:3em;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-left:2rem;
+}
+
 .section1 p{
-    padding: 1rem 0;
     background:lightgray;
     color:#FFF;
 }
 
 .section1 p:hover{
     background:lightgreen;
+    cursor: pointer;
 }
 
 .section2 p{
-    padding: 1rem 0;
     background:lightgreen;
     color:#FFF;
 }
 
 .section2 p:hover{
     background:lightgray;
+    cursor: pointer;
+}
+
+
+/* Section Delete */
+
+.section-delete-mode{
+    border:2px solid red;
+}
+
+.section-delete-mode h2{
+    color: red;
+}
+
+.section-delete-mode p{
+    background:red;
+    color:white;
+}
+
+.section-delete-mode p:hover{
+    background:pink;
+    cursor:pointer;
+}
+
+
+/* Section Edit */
+
+.section-edit-mode p{
+    background:#000B49;
+    color:white;
+}
+
+.section-edit-mode p:hover{
+    background:lightgray;
+    cursor:pointer;
 }
