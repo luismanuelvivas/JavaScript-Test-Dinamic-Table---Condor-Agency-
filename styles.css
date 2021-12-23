@@ -11,3 +11,23 @@ aside{
 .paragraph-clicked-styling{
     text-decoration: line-through;
 }
+
+.section1 p{
+    padding: 1rem 0;
+    background:lightgray;
+    color:#FFF;
+}
+
+.section1 p:hover{
+    background:lightgreen;
+}
+
+.section2 p{
+    padding: 1rem 0;
+    background:lightgreen;
+    color:#FFF;
+}
+
+.section2 p:hover{
+    background:lightgray;
+}
